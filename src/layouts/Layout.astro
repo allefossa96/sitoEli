@@ -80,22 +80,15 @@ import background from "../assets/background.svg";
         <div class="col-lg-4">
           <div class="card mb-3">
             <div class="card-body">
-              <p>
-                Vuoi avere più informazioni, dettagli e descrivermi la tua
-                situazione? prenota la tua chiamata gratuita (stretto
-                telefonico)
-              </p>
-              <img
-                src="https://via.placeholder.com/300x300/dc3545/ffffff?text=Photo"
-                alt="Dott.ssa Eleonora Fossa"
-                class="img-fluid"
-              />
-            </div>
-          </div>
+              <h3 class="card-title">Contatti e Consulenza</h3>
 
-          <div class="card mb-3">
-            <div class="card-body">
-              <h3 class="card-title">Contatti</h3>
+              <!-- CTA Sezione -->
+              <div class="cta-box mb-3">
+                <p class="cta-text">
+                  <strong>Prenota una consulenza gratuita</strong> per discutere della
+                  tua situazione e capire come posso aiutarti.
+                </p>
+              </div>
 
               <!-- Icone di contatto -->
               <div class="d-flex gap-3">
@@ -352,6 +345,21 @@ import background from "../assets/background.svg";
 
   .row > div {
     margin-bottom: 1.5rem;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    background: rgba(102, 126, 234, 0.08);
+    border-left: 3px solid #667eea;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .cta-text {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
   }
 
   /* Footer */
