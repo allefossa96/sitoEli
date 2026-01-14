@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Disturbi trattati - Dott.ssa Eleonora Fossa">
+  <h1 class="display-5 mb-4">Disturbi trattati</h1>
+
+  <p class="text-muted mb-4">
+    Psicologa a Castelfranco Emilia e Reggio Emilia<br />
+    Adolescenti e Adulti
+  </p>
+
+  <p class="mb-4">
+    Trovi qui un elenco completo, con la possibilità di approfondire ogni
+    singola problematica all'interno di una pagina dedicata semplicemente
+    cliccando sulla voce di tuo interesse
+  </p>
+
+  <ul class="list-styled">
+    <li>
+      <a href="/disturbi/ansia"
+        >Ansia, paura, fobie, attacchi di panico, ipocondria,</a>
+    </li>
+    <li>
+      <a href="/disturbi/depressione">depressione</a> (ad ogni disturbo poi bisogna
+      collegarci una pagina dove spieghiamo il disturbo)
+    </li>
+    <li><a href="#">ansia</a></li>
+    <li><a href="#">bla</a></li>
+    <li><a href="#">bla</a></li>
+    <li><a href="#">bla</a></li>
+  </ul>
+</Layout>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+
+  .list-styled {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+
+  .list-styled li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .list-styled a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .list-styled a:hover {
+    text-decoration: underline;
+  }
+</style>

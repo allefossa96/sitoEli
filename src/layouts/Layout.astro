@@ -1,0 +1,164 @@
+---
+// /src/layouts/Layout.astro
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+
+import "bootstrap/dist/css/bootstrap.css";
+import { Breadcrumb } from "astro-bootstrap";
+import background from "../assets/background.svg";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <p class="py-2 px-4">Dott.ssa Eleonora Fossa psicologa e psicoterapeuta</p>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px;"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/chisono">Chi Sono - Formazione</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/comelavoro">Come lavoro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/disturbitrattati">Disturbi trattati</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/terapiacoppia">Terapia di coppia</a>
+            </li>
+          </ul>
+
+          <a href="/contatti" class="btn btn-outline-success">Contattami</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <div class="row">
+        <!-- Contenuto principale -->
+        <div class="col-lg-8">
+          <slot />
+        </div>
+
+        <!-- Sidebar comune a tutte le pagine -->
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <p>
+                Vuoi avere più informazioni, dettagli e descrivermi la tua
+                situazione? prenota la tua chiamata gratuita (stretto
+                telefonico)
+              </p>
+              <h5 class="card-title">Contattami: clic e chiamata</h5>
+              <img
+                src="https://via.placeholder.com/300x300/dc3545/ffffff?text=Photo"
+                alt="Dott.ssa Eleonora Fossa"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Contatti</h5>
+              <p><strong>WhatsApp:</strong></p>
+              <p><strong>Tel:</strong> 353 4647601</p>
+              <p><strong>Email:</strong> fossa.psy@gmail.com</p>
+
+              <p class="mt-3"><strong>Ricevo su appuntamento a:</strong></p>
+              <ul>
+                <li>Corso Martiri 222, Castelfranco Emilia</li>
+                <li>Via Pietro Mambrotti 4, Reggio Emilia</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Scrivimi un messaggio</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="nome" />
+                </div>
+                <div class="mb-3">
+                  <label for="cognome" class="form-label">Cognome</label>
+                  <input type="text" class="form-control" id="cognome" />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Indirizzo email</label>
+                  <input type="email" class="form-control" id="email" />
+                </div>
+                <div class="mb-3">
+                  <label for="messaggio" class="form-label">messaggio</label>
+                  <textarea
+                    class="form-control"
+                    id="messaggio"
+                    rows="3"
+                    placeholder="Inserisci qui il tuo messaggio"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark w-100">invia</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      import "bootstrap/dist/js/bootstrap.bundle.js";
+    </script>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(100px);
+  }
+
+  .card {
+    border: 1px solid #dee2e6;
+  }
+</style>
