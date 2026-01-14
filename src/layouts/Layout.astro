@@ -8,6 +8,14 @@ const { title } = Astro.props;
 import "bootstrap/dist/css/bootstrap.css";
 import { Breadcrumb } from "astro-bootstrap";
 import background from "../assets/background.svg";
+
+// Ottieni il percorso della pagina corrente
+const currentPath = new URL(Astro.request.url).pathname;
+const isActive = (href: string) => {
+  if (href === "/" && currentPath === "/") return true;
+  if (href !== "/" && currentPath.startsWith(href)) return true;
+  return false;
+};
 ---
 
 <!doctype html>
@@ -47,21 +55,43 @@ import background from "../assets/background.svg";
               style="--bs-scroll-height: 100px;"
             >
               <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/chisono">Chi Sono - Formazione</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/comelavoro">Come lavoro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/disturbitrattati"
-                  >Disturbi trattati</a
+                <a class={`nav-link ${isActive("/") ? "active" : ""}`} href="/"
+                  >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/terapiacoppia">Terapia di coppia</a>
+                <a
+                  class={`nav-link ${isActive("/chisono") ? "active" : ""}`}
+                  href="/chisono">Chi Sono - Formazione</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class={`nav-link ${isActive("/comelavoro") ? "active" : ""}`}
+                  href="/comelavoro">Come lavoro</a
+                >
+              </li>
+              <li class="nav-item">
+                <select
+                  class="form-select nav-select"
+                  id="disturbi-select"
+                  onchange="if(this.value) window.location.href = this.value"
+                >
+                  <option value="">Disturbi trattati</option>
+                  <option value="/disturbi/ansia">Ansia e Paura</option>
+                  <option value="/disturbi/depressione"
+                    >Umore e Benessere</option
+                  >
+                  <option value="/disturbi/tmi">Relazioni e Socialità</option>
+                  <option value="/disturbi/cpp">Regolazione Emotiva</option>
+                  <option value="/disturbi/dtb">Disturbi Specifici</option>
+                </select>
+              </li>
+              <li class="nav-item">
+                <a
+                  class={`nav-link ${isActive("/terapiacoppia") ? "active" : ""}`}
+                  href="/terapiacoppia">Terapia di coppia</a
+                >
               </li>
             </ul>
           </div>
@@ -73,6 +103,9 @@ import background from "../assets/background.svg";
       <div class="row">
         <!-- Contenuto principale -->
         <div class="col-lg-8">
+          <div class="page-header mb-4">
+            <h2 class="page-title">{title.split(" - ")[0]}</h2>
+          </div>
           <slot />
         </div>
 
@@ -334,6 +367,52 @@ import background from "../assets/background.svg";
 
   .navbar-custom .nav-link:hover {
     color: #667eea !important;
+  }
+
+  .navbar-custom .nav-link.active {
+    color: white !important;
+    background-color: #667eea !important;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  }
+
+  /* Select nel navbar */
+  .nav-select {
+    color: #333 !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    border: 1px solid #ddd !important;
+    border-radius: 6px !important;
+    background-color: white !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .nav-select:hover {
+    border-color: #667eea !important;
+    color: #667eea !important;
+  }
+
+  .nav-select:focus {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25) !important;
+    outline: none !important;
+  }
+
+  /* Page Header */
+  .page-header {
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+    letter-spacing: 0.3px;
   }
 
   /* Main content area */
