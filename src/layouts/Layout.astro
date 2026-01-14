@@ -78,7 +78,6 @@ import background from "../assets/background.svg";
                 situazione? prenota la tua chiamata gratuita (stretto
                 telefonico)
               </p>
-              <h5 class="card-title">Contattami: clic e chiamata</h5>
               <img
                 src="https://via.placeholder.com/300x300/dc3545/ffffff?text=Photo"
                 alt="Dott.ssa Eleonora Fossa"
@@ -90,14 +89,122 @@ import background from "../assets/background.svg";
           <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title">Contatti</h5>
-              <p><strong>WhatsApp:</strong></p>
-              <p><strong>Tel:</strong> 353 4647601</p>
-              <p><strong>Email:</strong> fossa.psy@gmail.com</p>
 
-              <p class="mt-3"><strong>Ricevo su appuntamento a:</strong></p>
-              <ul>
-                <li>Corso Martiri 222, Castelfranco Emilia</li>
-                <li>Via Pietro Mambrotti 4, Reggio Emilia</li>
+              <!-- Icone di contatto -->
+              <div class="d-flex gap-3">
+                <!-- Numero di telefono -->
+                <p>
+                  <strong>Tel:</strong>
+                  <a href="tel:+393534647601" class="text-decoration-none ms-2">
+                    +39 353 4647601
+                  </a>
+                </p>
+
+                <!-- WhatsApp -->
+                <a
+                  href="https://wa.me/393534647601"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Contattami su WhatsApp"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.476 1.338-.936.164-.46.164-.852.114-.936-.049-.087-.182-.132-.38-.232z"
+                    ></path>
+                  </svg>
+                </a>
+
+                <!-- Telefono -->
+                <a href="tel:+393534647601" title="Chiama">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.654 1.328a.678.678 0 0 0-1.015-.063l-1.5 1.5a.678.678 0 0 0-.063 1.015c.252.394.534.757.821 1.1.288.343.645.738 1.049 1.153.929.992 2.205 1.977 3.522 2.75 1.317.773 2.693 1.335 4.172 1.653.12.029.24.053.361.081a.678.678 0 0 0 .704-.766c-.276-1.335-.795-2.666-1.554-3.864-.759-1.198-1.744-2.226-2.926-3.059a.678.678 0 0 0-.677-.03l-.464.293z"
+                    ></path>
+                    <path
+                      d="M13.083.627a.678.678 0 0 0-.959.118l-2.83 4.718a.678.678 0 0 0 .118.959.678.678 0 0 0 .959-.118l2.83-4.718a.678.678 0 0 0-.118-.959Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="d-flex gap-3">
+                <p>
+                  <strong>Email:</strong>
+                  <a href="mailto:fossa.psy@gmail.com" title="Invia email"
+                    >fossa.psy@gmail.com</a
+                  >
+                </p>
+                <!-- Email -->
+                <a href="mailto:fossa.psy@gmail.com" title="Invia email">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Indirizzi -->
+              <p>
+                <strong>Ricevo su appuntamento a:</strong>
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    class="me-2"
+                  >
+                    <path
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="https://www.google.com/maps/search/Corso+Martiri+222,+Castelfranco+Emilia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-decoration-none"
+                  >
+                    Corso Martiri 222, Castelfranco Emilia
+                  </a>
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    class="me-2"
+                  >
+                    <path
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="https://www.google.com/maps/search/Via+Pietro+Mambrotti+4,+Reggio+Emilia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-decoration-none"
+                  >
+                    Via Pietro Mambrotti 4, Reggio Emilia
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -119,7 +226,7 @@ import background from "../assets/background.svg";
                   <input type="email" class="form-control" id="email" />
                 </div>
                 <div class="mb-3">
-                  <label for="messaggio" class="form-label">messaggio</label>
+                  <label for="messaggio" class="form-label">Messaggio</label>
                   <textarea
                     class="form-control"
                     id="messaggio"
