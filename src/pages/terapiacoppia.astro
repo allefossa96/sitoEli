@@ -3,15 +3,116 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Terapia di coppia - Dott.ssa Eleonora Fossa">
-  <p>Nella terapia di coppia bla bla bla</p>
+  <div class="hero-box">
+    <h2 class="hero-title">Terapia di Coppia</h2>
+    <div class="divider"></div>
+    <p class="hero-text">
+      La terapia di coppia aiuta i partner a <strong
+        >comprendere più a fondo se stessi e la relazione</strong
+      >, andando oltre la ricerca di "chi ha ragione e chi ha torto". Il mio
+      approccio parte dall'idea che ognuno di noi costruisce il proprio modo di
+      vedere il mondo e le relazioni sulla base della <strong
+        >propria storia di vita</strong
+      >, delle emozioni vissute e delle esperienze affettive passate.
+    </p>
+
+    <p class="hero-text">
+      In una coppia, ciascun partner porta con sé questo <strong
+        >bagaglio personale</strong
+      >. Quando i modi di pensare, sentire e vivere la relazione sono molto
+      diversi, possono nascere <strong
+        >incomprensioni, conflitti o distanze emotive</strong
+      >.
+    </p>
+
+    <p class="hero-text">
+      Litigi, silenzi o gelosie diventano così <strong
+        >segnali di un disagio più profondo</strong
+      >, non semplici comportamenti sbagliati da correggere.
+    </p>
+
+    <p class="hero-text">
+      In terapia, il lavoro principale consiste nell'aiutare i partner a <strong
+        >riconoscere e comprendere le proprie emozioni</strong
+      > e il loro significato. Il terapeuta <strong
+        >non prende le parti di nessuno</strong
+      >
+      e non dà regole su come la coppia "dovrebbe" funzionare. Piuttosto, accompagna
+      entrambi a riflettere su ciò che provano, su come interpretano i comportamenti
+      dell'altro e su come queste interpretazioni siano spesso legate a <strong
+        >esperienze passate</strong
+      >, come la propria storia familiare o relazionale.
+    </p>
+
+    <p class="hero-text">
+      Un aspetto fondamentale è <strong
+        >imparare ad ascoltarsi in modo diverso</strong
+      >. La terapia favorisce un <strong>dialogo più consapevole</strong>, in
+      cui ciascun partner può esprimere ciò che sente senza accusare l'altro.
+      Allo stesso tempo, si impara a distinguere ciò che appartiene al proprio
+      vissuto personale da ciò che sta realmente accadendo nella relazione
+      attuale. Questo permette di
+      <strong>ridurre fraintendimenti e reazioni impulsive</strong>.
+    </p>
+
+    <p class="hero-text">
+      L'obiettivo della terapia <strong>non è eliminare i conflitti</strong>, ma
+      aiutare la coppia a dare loro un senso. Le difficoltà vengono viste come <strong
+        >occasioni per conoscersi meglio e crescere insieme</strong
+      >. Attraverso una maggiore comprensione reciproca, la relazione può
+      diventare più <strong>autentica, flessibile e capace</strong> di affrontare
+      i cambiamenti della vita senza rompersi.
+    </p>
+  </div>
 </Layout>
 
 <style>
-  h1 {
-    font-weight: bold;
+  .hero-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2a2a3e;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: #ddd;
+    margin: 1.5rem 0;
+    border-radius: 1px;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 1.5rem 0;
+    text-align: justify;
   }
 
   p {
     line-height: 1.7;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    .hero-box {
+      padding: 2rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
   }
 </style>

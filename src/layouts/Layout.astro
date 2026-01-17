@@ -102,7 +102,7 @@ const isActive = (href: string) => {
     <div class="container-lg my-5">
       <div class="row">
         <!-- Contenuto principale -->
-        {
+        <!-- {
           title.split(" - ")[0] !== "Home" ? (
             <div class="col-lg-8">
               <div class="page-header mb-4">
@@ -110,12 +110,12 @@ const isActive = (href: string) => {
               </div>
               <slot />
             </div>
-          ) : (
-            <div class="col-lg-8">
-              <slot />
-            </div>
-          )
-        }
+          ) : ( -->
+        <div class="col-lg-8">
+          <slot />
+        </div>
+        <!-- )
+        } -->
         <!-- Sidebar comune a tutte le pagine -->
         <div class="col-lg-4">
           <div class="card mb-3">

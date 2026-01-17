@@ -3,87 +3,207 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Chi Sono - Dott.ssa Eleonora Fossa">
-  <p>
-    Ho Conseguito la Laurea in Psicologia Cognitiva Applicata nel <strong
-      >2018</strong
-    > e sono iscritta all'Albo degli Psicologi dell'Emilia Romagna nella sezione A
-    con il numero <strong>10498</strong> (Scheda Personale <strong
-      >ELEONORA FOSSA</strong
-    > - Ordine degli Psicologi dell'Emilia-Romagna).
-  </p>
+  <div class="hero-box">
+    <h2 class="hero-title">Chi Sono</h2>
+    <div class="divider"></div>
 
-  <p>
-    Nel 2022 ho iniziato il percorso di <strong
-      >specializzazione in psicoterapia</strong
-    > presso la scuola Bolognese di PsicoterapiaCognitiva (SBPC) dei dott. re Silvio
-    Lenzi e Furio Lambruschi.
-  </p>
+    <p class="hero-text">
+      Ho conseguito la Laurea in <strong>Psicologia Cognitiva Applicata</strong> nel
+      <strong>2018</strong> e sono iscritta all'Albo degli Psicologi dell'Emilia Romagna
+      nella sezione A con il numero <strong>10498</strong>.
+    </p>
 
-  <p>
-    Ho approfondito la mia formazione attraverso un percorso di <strong
-      >psicoterapia personale</strong
-    >
-  </p>
+    <p class="hero-text">
+      Nel 2022 ho iniziato il percorso di <strong
+        >specializzazione in psicoterapia</strong
+      > presso la Scuola Bolognese di Psicoterapia Cognitiva (SBPC) dei dott.ri Silvio
+      Lenzi e Furio Lambruschi.
+    </p>
 
-  <p>
-    Durante il percorso di specializzazione in terapia ho avuto la possibilità
-    di conseguire le seguenti certificazioni:
-  </p>
+    <p class="hero-text">
+      Ho approfondito la mia formazione attraverso un percorso di <strong
+        >psicoterapia personale</strong
+      >, elemento fondamentale per ogni professionista che si occupa di salute
+      mentale.
+    </p>
+  </div>
 
-  <ul>
-    <li>
-      <a href="/disturbi/dtb" class="text-primary"><strong>DBT</strong></a>-
-      workshop introduttivo. Certificato rilasciato dalla Società Italiana per
-      la Dialectical Behavior Therapy. La Terapia Dialettico Comportamentale (<strong
-        >IDBT</strong
-      >) è una terapia evidence-based per il <strong
-        >disturbo borderline di personalità.</strong
-      >
-      <br />
-      Efficace anche per comportamenti impulsivi e pericolosi (es. guida spericolata,
-      risse), uso problematico di sostanze, farmaci o alcol, disturbi della condotta
-      alimentare (binge eating, bulimia), isolamento sociale, ritiro emotivo, difficoltà
-      relazionali.<br />
-      Per un approfondimento
-    </li>
-    <li>
-      <a href="/disturbi/tmi" class="text-primary"
-        ><strong>Terapia Metacognitiva Interpersonale (TMI)</strong></a
-      > che sostiene come per conoscere e curare un disturbo mentale è necessario
-      capire in che modo i diversi tratti di personalità si articolino tra loro <strong
-        >creando un funzionamento patologico stabile nel tempo.</strong
-      ><br />
-    </li>
-    <li>
-      <a href="/disturbi/cpp" class="text-primary"
-        ><strong>COPING POWER PROGRAM</strong></a
-      >
-      è un intervento specifico per la gestione e il controllo dell'aggressività per
-      bambini. Lo scopo generale di questo programma e quello di aiutare e sostenere
-      i bambini con problemi legati all'impulsività, al difficile rispetto per le
-      regole e a comportamenti aggressivi. Il Coping Power Program prevede una componente
-      dedicata ai bambini e una dedicata ai genitori. Nella mia pratica professionale,
-      ne utilizzo le nozioni e gli strumenti per supportare i genitori.<br />
-    </li>
-  </ul>
+  <div class="content-section">
+    <h3 class="section-title">Formazione e Certificazioni</h3>
+
+    <div class="certification-grid">
+      <div class="certification-card">
+        <div class="certification-badge">DBT</div>
+        <h4 class="certification-title">
+          <a href="/disturbi/dtb" class="certification-link"
+            >Terapia Dialettico Comportamentale</a
+          >
+        </h4>
+        <p>
+          Workshop introduttivo certificato dalla Società Italiana per la
+          Dialectical Behavior Therapy. Terapia evidence-based per il <strong
+            >disturbo borderline di personalità</strong
+          >, efficace anche per comportamenti impulsivi, uso problematico di
+          sostanze, disturbi alimentari, isolamento sociale e difficoltà
+          relazionali.
+        </p>
+      </div>
+
+      <div class="certification-card">
+        <div class="certification-badge">TMI</div>
+        <h4 class="certification-title">
+          <a href="/disturbi/tmi" class="certification-link"
+            >Terapia Metacognitiva Interpersonale</a
+          >
+        </h4>
+        <p>
+          Approccio che per conoscere e curare un disturbo mentale analizza come
+          i diversi tratti di personalità si articolino tra loro, <strong
+            >creando un funzionamento patologico stabile nel tempo</strong
+          >.
+        </p>
+      </div>
+
+      <div class="certification-card">
+        <div class="certification-badge">CPP</div>
+        <h4 class="certification-title">
+          <a href="/disturbi/cpp" class="certification-link"
+            >Coping Power Program</a
+          >
+        </h4>
+        <p>
+          Intervento specifico per la gestione e il controllo dell'aggressività
+          in bambini con problemi legati all'impulsività e al difficile rispetto
+          delle regole. Prevede una componente per i bambini e una per i
+          genitori. Nella mia pratica professionale, utilizzo le nozioni e gli
+          strumenti per supportare i genitori.
+        </p>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
-  h1 {
-    font-weight: bold;
+  /* Hero Box - Sezione principale */
+  .hero-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
   }
 
-  p,
-  li {
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2a2a3e;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: #ddd;
+    margin: 1.5rem 0;
+    border-radius: 1px;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 1.5rem 0;
+  }
+
+  /* Sezione Contenuto */
+  .content-section {
+    padding-top: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2a2a3e;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .certification-card {
+    background: white;
+    border-left: 3px solid #ddd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+  }
+
+  .certification-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left-color: #667eea;
+  }
+
+  .certification-badge {
+    display: inline-block;
+    background: #f5f5f7;
+    color: #667eea;
+    padding: 0.35rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .certification-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2a2a3e;
+    margin: 0.75rem 0;
+  }
+
+  .certification-link {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .certification-link:hover {
+    color: #5568d3;
+    text-decoration: underline;
+  }
+
+  .certification-card p {
+    color: #666;
+    font-size: 0.95rem;
     line-height: 1.6;
+    margin: 0.75rem 0 0 0;
   }
 
-  ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-  }
+  @media (max-width: 768px) {
+    .hero-box {
+      padding: 2rem;
+    }
 
-  li {
-    margin-bottom: 1rem;
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .certification-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+    }
   }
 </style>

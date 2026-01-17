@@ -3,70 +3,128 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Come lavoro - Dott.ssa Eleonora Fossa">
-  <p>
-    Il <strong>sintomo</strong> è un <strong>campanello di allarme</strong> di qualcosa
-    che non sta funzionando in noi. <strong
-      >Ma il vero problema è il sintomo o ciò che lo causa?</strong
-    > e ancora, perché proprio quel sintomo e non quella difficoltà? <strong
-      >perché in quel momento?</strong
-    >
-  </p>
+  <div class="hero-box">
+    <h2 class="hero-title">Come Lavoro</h2>
+    <div class="divider"></div>
+    <p class="hero-text">
+      Il <strong>sintomo</strong> è un <strong>campanello di allarme</strong> che
+      segnala qualcosa che non sta funzionando dentro di noi. Ma il vero problema
+      è il sintomo stesso o <strong>ciò che lo causa</strong>? E ancora: perché
+      si manifesta proprio quel sintomo e non un altro? <strong
+        >Perché in quel preciso momento?</strong
+      >
+    </p>
 
-  <p class="text-center my-4">
-    Insieme possiamo capire <strong>il significato</strong> di questo sintomo.
-  </p>
+    <p class="hero-text highlight-text">
+      Insieme possiamo esplorare e comprendere <strong
+        >il significato profondo</strong
+      > di ciò che stai vivendo.
+    </p>
 
-  <p>
-    Per farlo possiamo esplorare come la persona vive e interpreta la realtà.
-    Quali emozioni e pensieri si attivano nelle diverse situazioni o con le
-    diverse persone?
-  </p>
+    <p class="hero-text">
+      Per farlo, esploriamo <strong>come vivi e interpreti la realtà</strong>:
+      quali emozioni e pensieri si attivano nelle diverse situazioni? Come
+      reagisci con le diverse persone? Ogni persona, in base a come è cresciuta
+      e alle esperienze vissute, ha una <strong>visione unica del mondo</strong> e
+      un proprio modo di costruire significati e aspettative.
+    </p>
 
-  <p>
-    Ogni persona, per come è cresciuta e per le esperienze che ha fatto, ha una
-    visione unica del mondo ed un proprio modo di costruire significati e
-    aspettative.
-  </p>
+    <p class="hero-text">
+      Comprendere il <strong>proprio modo di funzionare</strong> è uno degli obiettivi
+      principali della terapia. Solo così possiamo dare senso al sintomo e al malessere
+      che ne deriva.
+    </p>
 
-  <p>
-    Ogni persona ha un proprio modo di funzionare ed è questo uno degli
-    obiettivi da perseguire in terapia. <strong
-      >In questo modo si può comprendere il sintomo e il malessere.</strong
-    >
-  </p>
+    <p class="hero-text">
+      Ognuno di noi è come se indossasse degli <strong
+        >occhiali con lenti particolari</strong
+      >
+      che filtrano la realtà in un determinato modo. In terapia ci chiediamo: possiamo
+      modificare quelle lenti? Possiamo esplorare le nostre credenze su noi stessi
+      e sugli altri in modo più <strong>flessibile e funzionale</strong>?
+    </p>
 
-  <p>
-    Guidare e accompagnare a una scoperta di sé è il metodo per risolvere le
-    difficoltà in modo profondo e permanente riconoscenza di difficoltà future
-  </p>
+    <p class="hero-text">
+      Guidare e accompagnare la persona verso una <strong
+        >scoperta autentica di sé</strong
+      >
+      è il metodo per risolvere le difficoltà in modo profondo e duraturo, <strong
+        >prevenendo il ripetersi</strong
+      > di problematiche future.
+    </p>
 
-  <p>
-    Ognuno di noi è come se indossasse degli occhiali con delle lenti che gli
-    fanno vedere il mondo in un determinato modo. Possiamo modificare quelle
-    lenti? Esplorare le nostre credenze su noi stessi o sugli altri più
-    flessibili?
-  </p>
+    <p class="hero-text">
+      Il mio approccio consiste nel <strong
+        >personalizzare ogni percorso terapeutico</strong
+      >
+      sulle caratteristiche uniche dell'individuo. L'obiettivo è che il trattamento
+      risponda realmente ai <strong>bisogni specifici</strong> della persona.
+    </p>
 
-  <p>
-    Il mio approccio consiste nel personalizzare ogni percorso terapeutico sulle
-    <strong>caratteristiche uniche dell'individuo.</strong> L'obiettivo è che il trattamento
-    risponda realmente ai bisogni specifici del soggetto.
-  </p>
-
-  <p>
-    La prima seduta è di conoscenza e dialogo sul motivo che ha portato il
-    paziente in studio. Fin dalla prima seduta è inoltre importante concordare
-    l'obiettivo che si vuole raggiungere, il metodo e i compiti reciproci.
-  </p>
+    <p class="hero-text">
+      <strong>La prima seduta</strong> è un momento di conoscenza e dialogo sul motivo
+      che ti ha portato in studio. Fin da subito è importante concordare insieme
+      <strong>l'obiettivo da raggiungere</strong>, il metodo di lavoro e i
+      compiti reciproci, creando una collaborazione trasparente e condivisa.
+    </p>
+  </div>
 </Layout>
 
 <style>
-  h1 {
-    font-weight: bold;
+  .hero-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2a2a3e;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: #ddd;
+    margin: 1.5rem 0;
+    border-radius: 1px;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 1.5rem 0;
+    text-align: justify;
+  }
+
+  .highlight-text {
+    text-align: center;
+    font-weight: 600;
+    color: #667eea;
+    padding: 1rem 0;
   }
 
   p {
     line-height: 1.7;
     margin-bottom: 1rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    .hero-box {
+      padding: 2rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
   }
 </style>
