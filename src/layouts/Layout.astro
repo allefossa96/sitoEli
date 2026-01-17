@@ -74,10 +74,10 @@ const isActive = (href: string) => {
               <li class="nav-item">
                 <select
                   class="form-select nav-select"
+                  style="border: none !important;"
                   id="disturbi-select"
                   onchange="if(this.value) window.location.href = this.value"
                 >
-                  <option value="">Disturbi trattati</option>
                   <option value="/disturbi/ansia">Ansia e Paura</option>
                   <option value="/disturbi/depressione"
                     >Umore e Benessere</option
@@ -102,13 +102,20 @@ const isActive = (href: string) => {
     <div class="container-lg my-5">
       <div class="row">
         <!-- Contenuto principale -->
-        <div class="col-lg-8">
-          <div class="page-header mb-4">
-            <h2 class="page-title">{title.split(" - ")[0]}</h2>
-          </div>
-          <slot />
-        </div>
-
+        {
+          title.split(" - ")[0] !== "Home" ? (
+            <div class="col-lg-8">
+              <div class="page-header mb-4">
+                <h2 class="page-title">{title.split(" - ")[0]}</h2>
+              </div>
+              <slot />
+            </div>
+          ) : (
+            <div class="col-lg-8">
+              <slot />
+            </div>
+          )
+        }
         <!-- Sidebar comune a tutte le pagine -->
         <div class="col-lg-4">
           <div class="card mb-3">
@@ -203,7 +210,7 @@ const isActive = (href: string) => {
                     rel="noopener noreferrer"
                     class="text-decoration-none"
                   >
-                    Via Pietro Mambrotti 4, Reggio Emilia
+                    Via Pietro Manodori 4, Reggio Emilia
                   </a>
                 </li>
               </ul>
