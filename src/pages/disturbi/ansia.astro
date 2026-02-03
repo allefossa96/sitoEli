@@ -6,6 +6,10 @@ import Layout from "../../layouts/Layout.astro";
   title="Ansia, paura, fobie, attacchi di panico e ipocondria - Dott.ssa Eleonora Fossa"
 >
   <div class="content-box">
+    <a href="/sitoEli/disturbitrattati" class="back-button">
+      ← Torna ai disturbi trattati
+    </a>
+
     <h1>Ansia, paura, fobie attacchi di panico e ipocondria</h1>
 
     <p class="subtitle">
@@ -86,6 +90,25 @@ import Layout from "../../layouts/Layout.astro";
     border-radius: 8px;
     padding: 3rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .back-button {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #ef7851 0%, #d86340 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    color: white;
   }
 
   h1,
