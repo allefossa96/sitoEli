@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import certificate3 from "../../assets/photos/certificate3.png";
+---
+
+<Layout title="Terapia metacognitiva interpersonale - Dott.ssa Eleonora Fossa">
+  <div class="hero-box">
+    <h2 class="hero-title">Terapia Metacognitiva Interpersonale</h2>
+    <div class="divider"></div>
+
+    <p class="hero-text">
+      La Terapia Metacognitiva Interpersonale (TMI) nasce a metà degli anni '90
+      dalla necessità di individuare nuove tecniche terapeutiche efficaci per la
+      cura dei pazienti con disturbi di personalità.
+    </p>
+
+    <p class="hero-text">
+      I disturbi di personalità sono caratterizzati da difficoltà da parte del
+      paziente di comprendere pensieri, sentimenti ed emozioni nel relazionarsi
+      in maniera adeguata con gli altri.
+    </p>
+
+    <p class="hero-text">
+      La <strong>Terapia Metacognitiva Interpersonale (TMI)</strong> si basa sull'assunto che non
+      è sempre facile descrivere cosa ha dato vita a uno stato emotivo negativo.
+      Non solo, molte persone hanno difficoltà nel comprendere quello che sta
+      provando l'altra persona e a utilizzare queste informazioni all'interno
+      della relazione.
+    </p>
+
+    <h3 class="section-subtitle">Come può aiutare lo psicologo?</h3>
+
+    <p class="hero-text">
+      Il terapeuta ed il paziente lavorano insieme per comprendere il modo in
+      cui il paziente pensa, sperimenta le emozioni e si comporta all'interno
+      delle relazioni.
+    </p>
+
+    <p class="hero-text">
+      A partire da questo si aiuta il paziente a <strong
+        >comprendere i motivi psicologici della sofferenza</strong
+      > e a considerare le ipotesi piuttosto che verità assolute.
+    </p>
+
+    <p class="hero-text">
+      <strong
+        >Il paziente non ha mai solo caratteristiche negative o disfunzionali,
+        anzi</strong
+      >.
+    </p>
+
+    <p class="hero-text">
+      In una fase successiva della terapia, tramite la valorizzazione degli
+      aspetti positivi, il paziente entra in contatto con le sue capacità e i
+      modi funzionali del sé che determinano realizzazione, soddisfazione e
+      adattamento utili per raggiungere i propri desideri e affrontare il mondo
+      con maggiore flessibilità e minore sofferenza.
+    </p>
+
+    <div class="text-center my-4">
+      <img
+        src={certificate3.src}
+        alt="Certificato Terapia Metacognitiva Interpersonale"
+        class="img-fluid certificate-image"
+      />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .hero-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2a2a3e;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: #ddd;
+    margin: 1.5rem 0;
+    border-radius: 1px;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 1.5rem 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2a2a3e;
+    margin: 2.5rem 0 1rem 0;
+  }
+
+  .certificate-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .hero-box {
+      padding: 2rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.3rem;
+    }
+  }
+</style>

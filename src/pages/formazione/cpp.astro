@@ -1,0 +1,110 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import certificate1 from "../../assets/photos/certificate1.png";
+---
+
+<Layout title="Coping Power Program - Dott.ssa Eleonora Fossa">
+  <div class="hero-box">
+    <h2 class="hero-title">Coping Power Program</h2>
+    <div class="divider"></div>
+
+    <p class="hero-text">
+      Molto spesso la vita delle famiglie è costellata da esperienze difficili
+      con i loro figli. Spesso scoppi di ira, <strong
+        >comportamenti rabbiosi</strong
+      >, difficoltà con la scuola portano a sensazioni di <strong
+        >tristezza, stress, rabbia e impotenza</strong
+      > sia nei figli che nei <strong>genitori</strong>.
+    </p>
+
+    <p class="hero-text">
+      Il <strong>Coping Power Program</strong> è un protocollo di orientamento
+      cognitivo-comportamentale, sviluppato da Lochman e Wells, valutato e
+      riconosciuto sia nei percorsi clinici che nei contesti scolastici. Si
+      svolge in gruppi per una durata di circa 30 incontri.
+    </p>
+
+    <p class="hero-text">
+      Personalmente <strong>non organizzo gruppi</strong>, la partecipazione
+      alla formazione sul Coping Power Program mi ha <strong
+        >fornito strumenti per l'aiuto e il sostegno alla genitorialità</strong
+      >.
+    </p>
+
+    <p class="hero-text">
+      Attraverso l'analisi e la comprensione del caso e della dinamica specifica
+      il genitore può essere supportato nell'utilizzo di alcune strategie
+      educative particolarmente efficaci, nella gestione dello stress e nel
+      favorire la nascita di nuove modalità relazionali con i figli, con se
+      stessi e con l'altro genitore, in modo da migliorare la comunicazione fra
+      le due parti.
+    </p>
+
+    <p class="hero-text">
+      Gli obiettivi sono: migliorare la comunicazione intrafamiliare, creare
+      momenti di condivisione familiare, ignorare comportamenti indesiderati,
+      favorire comportamenti adattivi attraverso l'uso di istruzioni
+      comportamentali e regole efficaci, uso di premi e gratificazioni.
+    </p>
+
+    <div class="text-center my-4">
+      <img
+        src={certificate1.src}
+        alt="Certificato Coping Power Program"
+        class="img-fluid certificate-image"
+      />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .hero-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2a2a3e;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: #ddd;
+    margin: 1.5rem 0;
+    border-radius: 1px;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 1.5rem 0;
+  }
+
+  .certificate-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .hero-box {
+      padding: 2rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
+</style>

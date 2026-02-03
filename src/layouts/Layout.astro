@@ -8,12 +8,12 @@ const { title } = Astro.props;
 import "bootstrap/dist/css/bootstrap.css";
 import { Breadcrumb } from "astro-bootstrap";
 import background from "../assets/background.svg";
-import image1 from "../assets/photos/image1.png";
-import image2 from "../assets/photos/image2.png";
-import image3 from "../assets/photos/image3.png";
-import image4 from "../assets/photos/image4.png";
+import profile1 from "../assets/photos/profile1.png";
+import profile2 from "../assets/photos/profile2.png";
+import profile3 from "../assets/photos/profile3.png";
+import profile4 from "../assets/photos/profile4.png";
 
-const portraits = [image1, image2, image3, image4];
+const portraits = [profile1, profile2, profile3, profile4];
 const randomPortrait = portraits[Math.floor(Math.random() * portraits.length)];
 
 // Ottieni il percorso della pagina corrente
@@ -115,21 +115,9 @@ const isActive = (href: string) => {
 
     <div class="container-lg my-5">
       <div class="row">
-        <!-- Contenuto principale -->
-        <!-- {
-          title.split(" - ")[0] !== "Home" ? (
-            <div class="col-lg-8">
-              <div class="page-header mb-4">
-                <h2 class="page-title">{title.split(" - ")[0]}</h2>
-              </div>
-              <slot />
-            </div>
-          ) : ( -->
         <div class="col-lg-8">
           <slot />
         </div>
-        <!-- )
-        } -->
         <!-- Sidebar comune a tutte le pagine -->
         <div class="col-lg-4">
           <!-- Ritratto con immagine casuale -->
@@ -294,16 +282,16 @@ const isActive = (href: string) => {
     </div>
 
     <footer class="site-footer">
-      <div class="container-lg py-4">
+      <div class="container-lg py-3">
         <div class="row">
-          <div class="col-md-4 mb-4 mb-md-0">
+          <div class="col-md-4 mb-3 mb-md-0">
             <h5>Dott.ssa Eleonora Fossa</h5>
             <p>Psicologa e Psicoterapeuta</p>
             <p class="small text-muted">
               Orientamento cognitivo-costruttivista
             </p>
           </div>
-          <div class="col-md-4 mb-4 mb-md-0">
+          <div class="col-md-4 mb-3 mb-md-0">
             <h5>Contatti</h5>
             <p>
               <a href="tel:+393534647601" class="text-decoration-none"
@@ -318,11 +306,43 @@ const isActive = (href: string) => {
           </div>
           <div class="col-md-4">
             <h5>Sedi</h5>
-            <p class="small mb-2">Corso Martiri 222, Castelfranco Emilia</p>
-            <p class="small">Via Pietro Mambrotti 4, Reggio Emilia</p>
+            <p class="small mb-2">
+              <img
+                src="/sitoEli/location.svg"
+                alt="Posizione"
+                width="16"
+                height="16"
+                class="me-2"
+                style="display: inline;"
+              /><a
+                href="https://www.google.com/maps/search/Corso+Martiri+222,+Castelfranco+Emilia"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-decoration-none"
+              >
+                Corso Martiri 222, Castelfranco Emilia
+              </a>
+            </p>
+            <p class="small">
+              <img
+                src="/sitoEli/location.svg"
+                alt="Posizione"
+                width="16"
+                height="16"
+                class="me-2"
+                style="display: inline;"
+              /><a
+                href="https://www.google.com/maps/search/Via+Pietro+Mambrotti+4,+Reggio+Emilia"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-decoration-none"
+              >
+                Via Pietro Manodori 4, Reggio Emilia
+              </a>
+            </p>
           </div>
         </div>
-        <hr class="my-3" />
+        <hr class="my-2" />
         <p class="text-center text-muted small mb-0">
           &copy; 2026 Dott.ssa Eleonora Fossa. Tutti i diritti riservati.
         </p>
