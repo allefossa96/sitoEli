@@ -252,17 +252,24 @@ const isActive = (href: string) => {
             <div class="card-body">
               <h3 class="card-title">Scrivimi un messaggio</h3>
               <form>
-                <div class="mb-3">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="nome" />
-                </div>
-                <div class="mb-3">
-                  <label for="cognome" class="form-label">Cognome</label>
-                  <input type="text" class="form-control" id="cognome" />
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="cognome" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" id="cognome" />
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Indirizzo email</label>
-                  <input type="email" class="form-control" id="email" />
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
                 </div>
                 <div class="mb-3">
                   <label for="messaggio" class="form-label">Messaggio</label>
