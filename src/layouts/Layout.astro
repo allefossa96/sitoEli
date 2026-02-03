@@ -80,26 +80,10 @@ const isActive = (href: string) => {
                 >
               </li>
               <li class="nav-item">
-                <select
-                  class="form-select nav-select"
-                  style="border: none !important;"
-                  id="disturbi-select"
-                  onchange="if(this.value) window.location.href = this.value"
+                <a
+                  class={`nav-link ${isActive("/disturbitrattati") ? "active" : ""}`}
+                  href="/sitoEli/disturbitrattati">Disturbi Trattati</a
                 >
-                  <option value="/sitoEli/disturbi/ansia">Ansia e Paura</option>
-                  <option value="/sitoEli/disturbi/depressione"
-                    >Umore e Benessere</option
-                  >
-                  <option value="/sitoEli/disturbi/tmi"
-                    >Relazioni e Socialità</option
-                  >
-                  <option value="/sitoEli/disturbi/cpp"
-                    >Regolazione Emotiva</option
-                  >
-                  <option value="/sitoEli/disturbi/dtb"
-                    >Disturbi Specifici</option
-                  >
-                </select>
               </li>
               <li class="nav-item">
                 <a

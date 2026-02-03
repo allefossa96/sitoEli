@@ -3,50 +3,114 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Disturbi trattati - Dott.ssa Eleonora Fossa">
-  <p class="mb-4">
-    Trovi qui un elenco completo, con la possibilità di approfondire ogni
-    singola problematica all'interno di una pagina dedicata semplicemente
-    cliccando sulla voce di tuo interesse
-  </p>
+  <div class="hero-box">
+    <h2 class="hero-title">Disturbi Trattati</h2>
+    <div class="divider"></div>
+    <p class="hero-text">
+      Trovi qui un elenco completo, con la possibilità di approfondire ogni
+      singola problematica all'interno di una pagina dedicata semplicemente
+      cliccando sulla voce di tuo interesse
+    </p>
+  </div>
 
-  <ul class="list-styled">
-    <li>
-      <a href="/disturbi/ansia"
-        >Ansia, paura, fobie, attacchi di panico, ipocondria,</a
-      >
-    </li>
-    <li>
-      <a href="/disturbi/depressione">depressione</a> (ad ogni disturbo poi bisogna
-      collegarci una pagina dove spieghiamo il disturbo)
-    </li>
-    <li><a href="#">ansia</a></li>
-    <li><a href="#">bla</a></li>
-    <li><a href="#">bla</a></li>
-    <li><a href="#">bla</a></li>
-  </ul>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <a href="/sitoEli/disturbi/ansia" class="disturbo-card">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title">Ansia e Paura</h3>
+            <p class="card-text">
+              Ansia, paura, fobie, attacchi di panico, ipocondria.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="/sitoEli/disturbi/depressione" class="disturbo-card">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title">Depressione</h3>
+            <p class="card-text">Umore e benessere psicologico.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="/sitoEli/disturbi/autostima" class="disturbo-card">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title">
+              Autostima, autorealizzazione e orientamento personale
+            </h3>
+            <p class="card-text">Benessere psicologico e crescita personale.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 </Layout>
 
 <style>
-  h1 {
-    font-weight: bold;
+  .hero-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
   }
 
-  .list-styled {
-    list-style-type: disc;
-    margin-left: 1.5rem;
+  .hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #2a2a3e;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
   }
 
-  .list-styled li {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: #ddd;
+    margin: 1.5rem 0;
+    border-radius: 1px;
   }
 
-  .list-styled a {
-    color: #000;
+  .hero-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 1.5rem 0 0 0;
+    text-align: justify;
+  }
+
+  .disturbo-card {
     text-decoration: none;
+    color: inherit;
+    display: block;
   }
 
-  .list-styled a:hover {
-    text-decoration: underline;
+  .disturbo-card .card {
+    border: 1px solid #e6e6e6;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .disturbo-card:hover .card {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-title {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .card-text {
+    margin: 0;
+    color: #555;
   }
 </style>
