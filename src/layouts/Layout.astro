@@ -8,6 +8,13 @@ const { title } = Astro.props;
 import "bootstrap/dist/css/bootstrap.css";
 import { Breadcrumb } from "astro-bootstrap";
 import background from "../assets/background.svg";
+import image1 from "../assets/photos/image1.png";
+import image2 from "../assets/photos/image2.png";
+import image3 from "../assets/photos/image3.png";
+import image4 from "../assets/photos/image4.png";
+
+const portraits = [image1, image2, image3, image4];
+const randomPortrait = portraits[Math.floor(Math.random() * portraits.length)];
 
 // Ottieni il percorso della pagina corrente
 const currentPath = new URL(Astro.request.url).pathname;
@@ -55,20 +62,21 @@ const isActive = (href: string) => {
               style="--bs-scroll-height: 100px;"
             >
               <li class="nav-item">
-                <a class={`nav-link ${isActive("/") ? "active" : ""}`} href="/"
-                  >Home</a
+                <a
+                  class={`nav-link ${isActive("/") ? "active" : ""}`}
+                  href="/sitoEli/">Home</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class={`nav-link ${isActive("/chisono") ? "active" : ""}`}
-                  href="/chisono">Chi Sono - Formazione</a
+                  href="/sitoEli/chisono">Chi Sono - Formazione</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class={`nav-link ${isActive("/comelavoro") ? "active" : ""}`}
-                  href="/comelavoro">Come lavoro</a
+                  href="/sitoEli/comelavoro">Come lavoro</a
                 >
               </li>
               <li class="nav-item">
@@ -90,7 +98,7 @@ const isActive = (href: string) => {
               <li class="nav-item">
                 <a
                   class={`nav-link ${isActive("/terapiacoppia") ? "active" : ""}`}
-                  href="/terapiacoppia">Terapia di coppia</a
+                  href="/sitoEli/terapiacoppia">Terapia di coppia</a
                 >
               </li>
             </ul>
@@ -118,6 +126,19 @@ const isActive = (href: string) => {
         } -->
         <!-- Sidebar comune a tutte le pagine -->
         <div class="col-lg-4">
+          <!-- Ritratto con immagine casuale -->
+          <div class="card mb-3">
+            <div class="card-body text-center">
+              <img
+                src={randomPortrait.src}
+                id="randomPortrait"
+                alt="Ritratto"
+                class="img-fluid rounded"
+                style="max-width: 100%; height: auto;"
+              />
+            </div>
+          </div>
+
           <div class="card mb-3">
             <div class="card-body">
               <h3 class="card-title">Contatti e Consulenza</h3>
@@ -148,7 +169,7 @@ const isActive = (href: string) => {
                   title="Contattami su WhatsApp"
                 >
                   <img
-                    src="/whatsapp.svg"
+                    src="/sitoEli/whatsapp.svg"
                     alt="WhatsApp"
                     width="20"
                     height="20"
@@ -157,7 +178,12 @@ const isActive = (href: string) => {
 
                 <!-- Telefono -->
                 <a href="tel:+393534647601" title="Chiama">
-                  <img src="/phone.svg" alt="Telefono" width="20" height="20" />
+                  <img
+                    src="/sitoEli/phone.svg"
+                    alt="Telefono"
+                    width="20"
+                    height="20"
+                  />
                 </a>
               </div>
               <div class="d-flex gap-3">
@@ -167,7 +193,12 @@ const isActive = (href: string) => {
                     >fossa.psy@gmail.com</a
                   >
                   <a href="mailto:fossa.psy@gmail.com" title="Invia email">
-                    <img src="/email.svg" alt="Email" width="20" height="20" />
+                    <img
+                      src="/sitoEli/email.svg"
+                      alt="Email"
+                      width="20"
+                      height="20"
+                    />
                   </a>
                 </p>
               </div>
@@ -179,7 +210,7 @@ const isActive = (href: string) => {
               <ul class="list-unstyled">
                 <li class="mb-2">
                   <img
-                    src="/location.svg"
+                    src="/sitoEli/location.svg"
                     alt="Posizione"
                     width="16"
                     height="16"
@@ -197,7 +228,7 @@ const isActive = (href: string) => {
                 </li>
                 <li>
                   <img
-                    src="/location.svg"
+                    src="/sitoEli/location.svg"
                     alt="Posizione"
                     width="16"
                     height="16"
@@ -329,7 +360,7 @@ const isActive = (href: string) => {
   }
 
   .header-title {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ef7851 0%, #d86340 100%);
     color: white;
     margin: 0;
     padding: 2.5rem 2rem !important;
@@ -351,7 +382,7 @@ const isActive = (href: string) => {
 
   .navbar-custom {
     background-color: rgba(255, 255, 255, 0.98);
-    border-top: 1px solid rgba(102, 126, 234, 0.2);
+    border-top: 1px solid rgba(239, 120, 81, 0.2);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
@@ -373,15 +404,15 @@ const isActive = (href: string) => {
   }
 
   .navbar-custom .nav-link:hover {
-    color: #667eea !important;
+    color: #ef7851 !important;
   }
 
   .navbar-custom .nav-link.active {
     color: white !important;
-    background-color: #667eea !important;
+    background-color: #ef7851 !important;
     border-radius: 6px;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 2px 8px rgba(239, 120, 81, 0.3);
   }
 
   /* Select nel navbar */
@@ -398,19 +429,19 @@ const isActive = (href: string) => {
   }
 
   .nav-select:hover {
-    border-color: #667eea !important;
-    color: #667eea !important;
+    border-color: #ef7851 !important;
+    color: #ef7851 !important;
   }
 
   .nav-select:focus {
-    border-color: #667eea !important;
-    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25) !important;
+    border-color: #ef7851 !important;
+    box-shadow: 0 0 0 0.2rem rgba(239, 120, 81, 0.25) !important;
     outline: none !important;
   }
 
   /* Page Header */
   .page-header {
-    border-bottom: 2px solid #667eea;
+    border-bottom: 2px solid #ef7851;
     padding-bottom: 1rem;
   }
 
@@ -435,8 +466,8 @@ const isActive = (href: string) => {
 
   /* CTA Box */
   .cta-box {
-    background: rgba(102, 126, 234, 0.08);
-    border-left: 3px solid #667eea;
+    background: rgba(239, 120, 81, 0.08);
+    border-left: 3px solid #ef7851;
     padding: 1rem;
     border-radius: 6px;
   }
@@ -450,7 +481,7 @@ const isActive = (href: string) => {
 
   /* Footer */
   .site-footer {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ef7851 0%, #d86340 100%);
     color: white;
     margin-top: auto;
   }
